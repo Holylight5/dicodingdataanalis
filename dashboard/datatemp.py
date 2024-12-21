@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Membaca data
-dfh = pd.read_csv("D:/Bangkit Akademi/Dicoding/data/hour.csv")
-dfd = pd.read_csv("D:/Bangkit Akademi/Dicoding/data/day.csv")
+dfh = pd.read_csv("data/hour.csv")
+dfd = pd.read_csv("data/day.csv")
 # Merubah nama kolom
 dfd.rename(columns={'yr': 'year',
                     'mnth': 'month',
