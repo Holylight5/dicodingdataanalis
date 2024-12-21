@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Membaca data
-dfd = pd.read_csv("D:/Bangkit Akademi/Dicoding/data/day.csv")
+dfd = pd.read_csv("data/day.csv")
 
 # Merubah nama kolom
 dfd.rename(columns={'yr': 'year',
