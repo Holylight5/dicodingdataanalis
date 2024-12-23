@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ## Run steamlit app
 ```
-streamlit run dashboard.py
+streamlit run dashboard/dashboard.py
 ```
 ## Link app
 https://sn7nsycsx3w3d6zmb478na.streamlit.app/
