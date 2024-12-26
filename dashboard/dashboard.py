@@ -70,8 +70,8 @@ elif analysis_number == 4:
         ### No 4
         Di musim apa sepeda paling banyak di rental?
 
-        ============================================
-        Musim 
+        ==========
+        ### Musim 
         1: Spring  2: Summer  3: Fall  4 :Winter
         ============================================
         
