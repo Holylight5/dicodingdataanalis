@@ -70,10 +70,10 @@ elif analysis_number == 4:
         ### No 4
         Di musim apa sepeda paling banyak di rental?
 
-        ==========
+        =========
         ### Musim 
         1: Spring  2: Summer  3: Fall  4 :Winter
-        ============================================
+        =========
         
         Dari data di bawah menunjukkan bahwa pengguna sepeda paling banyak pada musim gugur, bisa jadi karena cuaca di musim gugur yang sejuk dengan pemandangan gugurnya daun pohon yang membuat kesan romantis.
         """
