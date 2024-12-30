@@ -28,6 +28,13 @@ analysis_number = st.sidebar.selectbox(
     index=0  # Default pilihan
 )
 
+# Menambahkan filter untuk memilih musim
+season_filter = st.sidebar.selectbox(
+    "Pilih Musim",
+    ["Semua", "Spring", "Summer", "Fall", "Winter"],  # Pilihan musim
+    index=0  # Default pilihan
+)
+
 if analysis_number == 1:
     st.write(
         """
@@ -81,5 +88,18 @@ elif analysis_number == 4:
         Dari data di bawah menunjukkan bahwa pengguna sepeda paling banyak pada musim gugur, bisa jadi karena cuaca di musim gugur yang sejuk dengan pemandangan gugurnya daun pohon yang membuat kesan romantis.
         """
     )
-    # Menggunakan plot dari file datamusim
-    st.pyplot(datamusim.fig)
+    # Menyesuaikan plot berdasarkan filter musim
+    if season_filter == "Semua":
+        st.pyplot(datamusim.fig)
+        st.pyplot(datamusim.spring_fig)
+        st.pyplot(datamusim.summer_fig)
+        st.pyplot(datamusim.fall_fig)
+        st.pyplot(datamusim.winter_fig)
+    elif season_filter == "Spring":
+        st.pyplot(datamusim.spring_fig)
+    elif season_filter == "Summer":
+        st.pyplot(datamusim.summer_fig)
+    elif season_filter == "Fall":
+        st.pyplot(datamusim.fall_fig)
+    elif season_filter == "Winter":
+        st.pyplot(datamusim.winter_fig)
