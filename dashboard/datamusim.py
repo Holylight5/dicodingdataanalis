@@ -32,7 +32,7 @@ seasonal_rentals = dfd.groupby('Season').agg({'Count': 'sum'}).sort_values('Coun
 st.subheader("Jumlah Pengguna Sepeda per Musim")
 st.write(seasonal_rentals)
 
-# Membuat bar plot
+# Membuat bar plot utama
 st.subheader("Visualisasi Penggunaan Sepeda per Musim")
 fig, ax = plt.subplots(figsize=(8, 6))
 sns.barplot(x=seasonal_rentals.index, y=seasonal_rentals['Count'], palette='viridis', ax=ax)
@@ -49,3 +49,51 @@ plt.tight_layout()
 
 # Menampilkan plot di Streamlit
 st.pyplot(fig)
+
+# Membuat plot untuk musim Spring
+spring_data = dfd[dfd['Season'] == 1]
+fig, ax = plt.subplots(figsize=(8, 6))
+sns.lineplot(data=spring_data, x=spring_data.index, y='Count', ax=ax)
+ax.set_title('Penggunaan Sepeda di Musim Semi (Spring)', fontsize=14)
+ax.set_xlabel('Tanggal')
+ax.set_ylabel('Jumlah Pengguna Sepeda')
+plt.tight_layout()
+spring_fig = plt.gcf()
+st.pyplot(spring_fig)  # Display Spring figure
+plt.close()
+
+# Membuat plot untuk musim Summer
+summer_data = dfd[dfd['Season'] == 2]
+fig, ax = plt.subplots(figsize=(8, 6))
+sns.lineplot(data=summer_data, x=summer_data.index, y='Count', ax=ax)
+ax.set_title('Penggunaan Sepeda di Musim Panas (Summer)', fontsize=14)
+ax.set_xlabel('Tanggal')
+ax.set_ylabel('Jumlah Pengguna Sepeda')
+plt.tight_layout()
+summer_fig = plt.gcf()
+st.pyplot(summer_fig)  # Display Summer figure
+plt.close()
+
+# Membuat plot untuk musim Fall
+fall_data = dfd[dfd['Season'] == 3]
+fig, ax = plt.subplots(figsize=(8, 6))
+sns.lineplot(data=fall_data, x=fall_data.index, y='Count', ax=ax)
+ax.set_title('Penggunaan Sepeda di Musim Gugur (Fall)', fontsize=14)
+ax.set_xlabel('Tanggal')
+ax.set_ylabel('Jumlah Pengguna Sepeda')
+plt.tight_layout()
+fall_fig = plt.gcf()
+st.pyplot(fall_fig)  # Display Fall figure
+plt.close()
+
+# Membuat plot untuk musim Winter
+winter_data = dfd[dfd['Season'] == 4]
+fig, ax = plt.subplots(figsize=(8, 6))
+sns.lineplot(data=winter_data, x=winter_data.index, y='Count', ax=ax)
+ax.set_title('Penggunaan Sepeda di Musim Dingin (Winter)', fontsize=14)
+ax.set_xlabel('Tanggal')
+ax.set_ylabel('Jumlah Pengguna Sepeda')
+plt.tight_layout()
+winter_fig = plt.gcf()
+st.pyplot(winter_fig)  # Display Winter figure
+plt.close()
